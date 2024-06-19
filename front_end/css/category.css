@@ -1,0 +1,37 @@
+.categories {
+    flex: 0 0 28%;
+    margin-top: 70px;
+}
+
+.courses {
+    flex: 0 0 70%;
+    width: 70%
+}
+
+.sub-categories {
+    margin-left: 20px;
+}
+
+.category-title {
+    cursor: pointer;
+}
+
+.categories>.category.active>.category-title,
+.categories>.category:has(.active)>.category-title {
+    background-color: #00BCD4;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.category-count {
+    margin-left: 10px;
+    color: grey;
+    font-size: 17px;
+}
+
+.sub-categories .category.active>.category-title {
+    border-left: 5px solid #FF9800;
+    padding-left: 7px;
+}

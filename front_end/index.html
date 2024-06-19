@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Knowldgecity Test</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/course.css">
+    <link rel="stylesheet" href="/css/category.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="admin-control">
+        <button class="admin-login">Admin Login</button>
+    </div>
+    <div class="container">
+        <div class="categories">
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+            <p class="category"><span class="category-title skeleton-loading-category"></span></p>
+        </div>
+        <div class="courses">
+            <div class="header">
+                Course catalog
+            </div>
+            <div class="course-container">
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+                <div class="course">
+                    <div class="course-image skeleton-loading-course"></div>
+                    <p class="course-title skeleton-loading-course"></p>
+                    <p class="course-disc skeleton-loading-course"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/admin-login.js" type="module"></script>
+<script src="/js/category.js" type="module"></script>
+<script src="/js/course.js" type="module"></script>
+<script type="module">
+    import { getCategories } from '/js/category.js'
+    import { getCourses } from '/js/course.js'
+    import {keyDownConfirm, checkAdminStatus} from '/js/admin-login.js'
+
+    await getCategories() // get categories from backend
+    await getCourses() // get courses from backend
+    window.keyDownConfirm = function(e){
+        keyDownConfirm(e)
+    }
+    checkAdminStatus();
+</script>
+</html>

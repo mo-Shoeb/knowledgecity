@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^swagger(.*)$ Swagger/$1 [L]
+RewriteRule ^admin(.*)$ routes/admin.php [L]
+RewriteCond %{REQUEST_URI} !^/(Swagger|routes)
+RewriteRule ^(.*)$ routes/api.php [L]
