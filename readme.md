@@ -2,8 +2,11 @@
 ## Project backend has ZERO dependency, PSR-12 and pure language as requested .
 ### docker-compose.yml was modified to enable PDO and .htaccess rewrite .
 
-
-
+#### Live URL : https://moshoeb.win/knowldgecity/
+#### Live API : https://moshoeb.win/knowldgecity/apis/
+#### Live Swagger : https://moshoeb.win/knowldgecity/apis/swagger/index.html
+#### Reset/Seed DB : https://moshoeb.win/knowldgecity/apis/admin/seed
+## Admin username & password : admin
 
 
 

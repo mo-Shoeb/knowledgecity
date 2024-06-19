@@ -13,8 +13,10 @@ function loginSwal() {
     Swal.fire({
         title: 'Login',
         html: `
-            <input type="text" onkeyup="keyDownConfirm(event)" id="username" class="swal2-input" placeholder="Username">
-            <input type="password" onkeyup="keyDownConfirm(event)" id="password" class="swal2-input" placeholder="Password">
+            <p>Username & Password are both: admin</p>
+            <p>already added to inputs, just hit login  &#128519;</p>
+            <input value="admin" type="text" onkeyup="keyDownConfirm(event)" id="username" class="swal2-input" placeholder="Username">
+            <input value="admin" type="password" onkeyup="keyDownConfirm(event)" id="password" class="swal2-input" placeholder="Password">
         `,
         showCancelButton: true,
         confirmButtonText: 'Login',
