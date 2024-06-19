@@ -1,0 +1,4 @@
+Options -Indexes
+RewriteEngine On
+RewriteRule ^apis/(.*)$ http://172.18.0.2/$1 [P]
+RewriteRule ^(.*)$ http://172.18.0.4/$1 [P]

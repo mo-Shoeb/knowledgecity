@@ -1,0 +1,69 @@
+ /* Shimmer effect */
+
+ .skeleton-loading-category {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     display: block;
+     height: 20px;
+ }
+
+ .skeleton-loading-course {
+     position: relative;
+     overflow: hidden;
+     width: 100%;
+     display: block;
+ }
+
+ .skeleton-loading-category::before {
+     content: "";
+     display: block;
+     position: absolute;
+     top: 0;
+     left: -150%;
+     height: 100%;
+     width: 150%;
+     background: linear-gradient(to right, #e0e0e0 0%, #f0f0f0 50%, #e0e0e0 100%);
+     animation: shimmer 1.5s infinite;
+ }
+
+ .skeleton-loading-course {
+     background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 50%, #e0e0e0 75%);
+     background-size: 200% 100%;
+     border-radius: 4px;
+     position: relative;
+     animation: shimmerCourse 1.5s infinite;
+ }
+
+ .skeleton-loading-course.course-title,
+ .skeleton-loading-course.course-disc {
+     width: 95%;
+     height: 18px;
+     margin: 0 auto;
+     margin-top: 10px;
+     margin-bottom: 10px;
+ }
+
+ @keyframes shimmer {
+     0% {
+         left: -150%;
+     }
+
+     50% {
+         left: 150%;
+     }
+
+     100% {
+         left: -150%;
+     }
+ }
+
+ @keyframes shimmerCourse {
+     0% {
+         background-position: 200% 0;
+     }
+
+     100% {
+         background-position: -200% 0;
+     }
+ }

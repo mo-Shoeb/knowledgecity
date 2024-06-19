@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /
+RewriteRule ^swagger(.*)$ Swagger/$1 [L]
+RewriteRule ^admin(.*)$ routes/admin.php [L]
+RewriteCond %{REQUEST_URI} !^/(Swagger|routes)
+RewriteRule ^(.*)$ routes/api.php [L]
+
+#VPS HTACCESS
+#https://moshoeb.win/knowldgecity/api/
+#RewriteEngine On
+#RewriteBase /
+#RewriteRule ^swagger(.*)$ knowldgecity/api/Swagger/$1 [L]
+#RewriteRule ^admin(.*)$ knowldgecity/api/routes/admin.php [L]
+#RewriteCond %{REQUEST_URI} !^/(knowldgecity/api/Swagger|knowldgecity/api/routes)
+#RewriteRule ^(.*)$ knowldgecity/api/routes/api.php [L]
