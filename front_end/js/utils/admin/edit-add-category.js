@@ -50,7 +50,7 @@ function openSwal(id, action, categoryData, parents){
             const categoryName = Swal.getPopup().querySelector('#categoryName').value;
             const categoryParent = Swal.getPopup().querySelector('#categoryParent').value;
 
-            if (!categoryName || !categoryParent) {
+            if (!categoryName) {
                 Swal.showValidationMessage('Please enter both Name and Category');
                 return false;
             }
